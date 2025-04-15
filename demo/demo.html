@@ -30,7 +30,17 @@
             );
             PathwayViewer.loadPathway(
                 document.querySelector("#somePathwayBox5B"), 
-                "https://credentialengineregistry.org/resources/ce-c0ff089f-7f18-4248-9054-45a6e5d2c8b4"
+                "https://credentialengineregistry.org/resources/ce-c0ff089f-7f18-4248-9054-45a6e5d2c8b4",
+                {
+                    UI: {
+                        PathwayHeaderTag: "h1",
+                        DefaultComponentProgressionLevelHeaderLabel: { "en-us": "All Components" },
+                        ComponentURILinks: []
+                    },
+                    Language: {
+                        PreferredCodes: [ "en-gb" ]
+                    }
+                }
             );
         }
     </script>
