@@ -62,25 +62,41 @@ Configuration
 A third parameter can be passed to `PathwayViewer.loadPathway` consisting of several options for how pathways get rendered. The structure and defaults are shown below.
 ```json
 {
-    UI: {
-        PathwayHeaderTag: "h2",
-        DefaultComponentProgressionLevelHeaderLabel: { "en-us": "Components" },
-        DefaultDestinationProgressionLevelHeaderLevel: { "en-us": "Destination" },
-        ComponentURILinks: [
-            { Label: { "en-us": "View Component in Credential Registry" }, URIPattern: "{uri}" },
-            { Label: { "en-us": "View Component in Credential Finder" }, URIPattern: "https://credentialfinder.org/resources/{ctid}" }
-        ],
-        ComponentProxyForLinks: [
-            { Label: { "en-us": "View Resource in Credential Registry" }, URIPattern: "{uri}" },
-            { Label: { "en-us": "View Resource in Credential Finder" }, URIPattern: "https://credentialfinder.org/resources/{ctid}" }
-        ]
-    },
-    Language: {
-        MaxCodes: 100,
-        AllowAll: true,
-        PreferredCodes: ["en-US", "en-us", "en"],
-        ValueJoiner: ", "
-    }
+	"UI": {
+		"PathwayHeaderTag": "h2",
+		"DefaultComponentProgressionLevelHeaderLabel": { "en-us": "Components" },
+		"DefaultDestinationProgressionLevelHeaderLevel": { "en-us": "Destination" },
+		"ComponentURILinks": [ 
+            { 
+                "Label": { "en-us": "View Component in Credential Registry" }, 
+                "URIPattern": "{uri}" 
+            },
+			{
+				"Label": { "en-us": "View Component in Credential Finder" },
+				"URIPattern": "https://credentialfinder.org/resources/{ctid}"
+			}
+		],
+		"ComponentProxyForLinks": [
+			{
+				"Label": { "en-us": "View Resource in Credential Registry" },
+				"URIPattern": "{uri}"
+			},
+			{
+				"Label": { "en-us": "View Resource in Credential Finder" },
+				"URIPattern": "https://credentialfinder.org/resources/{ctid}"
+			}
+		]
+	},
+	"Language": {
+		"MaxCodes": 100,
+		"AllowAll": true,
+		"PreferredCodes": [
+			"en-US",
+			"en-us",
+			"en"
+		],
+		"ValueJoiner": ", "
+	}
 }
 ```
 - `UI.PathwayHeaderTag`: Controls which HTML tag is used to render the header that displays above the pathway box. Use CSS to hide the header if no header is desired.
