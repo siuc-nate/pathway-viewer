@@ -13,16 +13,16 @@ Basic Example
 <head>
 <script type="text/javascript" src="../src/pathwayviewer.js" onload="setupPathway()" defer async></script>
 <script type="text/javascript">
-    function setupPathway(){
-        PathwayViewer.loadPathway(
-            document.querySelector("#somePathwayBox"), 
-            "https://credentialengineregistry.org/resources/ce-9dec2bcb-40a4-42e2-8fa3-afc04ddc04aa"
-        );
-    }
+  function setupPathway(){
+    PathwayViewer.loadPathway(
+      document.querySelector("#somePathwayBox"), 
+      "https://credentialengineregistry.org/resources/ce-9dec2bcb-40a4-42e2-8fa3-afc04ddc04aa"
+    );
+  }
 </script>
 </head>
 <body>
-    <div id="somePathwayBox"></div>
+  <div id="somePathwayBox"></div>
 </body>
 ```
 
@@ -34,26 +34,26 @@ The Pathway Viewer supports loading and displaying multiple pathways on one page
 <head>
 <script type="text/javascript" src="../src/pathwayviewer.js" onload="setupPathway()" defer async></script>
 <script type="text/javascript">
-    function setupPathway(){
-        PathwayViewer.loadPathway(
-            document.querySelector("#somePathwayBox1"), 
-            "https://credentialengineregistry.org/resources/ce-9dec2bcb-40a4-42e2-8fa3-afc04ddc04aa"
-        );
-        PathwayViewer.loadPathway(
-            document.querySelector("#somePathwayBox2"), 
-            "https://credentialengineregistry.org/resources/ce-0f0af1dd-35c7-43e2-9363-6bc079508747"
-        );
-        PathwayViewer.loadPathway(
-            document.querySelector("#somePathwayBox2"), 
-            "https://credentialengineregistry.org/resources/ce-164b0c4e-f96e-4597-a5d6-2fcd53635c46"
-        );
-    }
+  function setupPathway(){
+    PathwayViewer.loadPathway(
+      document.querySelector("#somePathwayBox1"), 
+      "https://credentialengineregistry.org/resources/ce-9dec2bcb-40a4-42e2-8fa3-afc04ddc04aa"
+    );
+    PathwayViewer.loadPathway(
+      document.querySelector("#somePathwayBox2"), 
+      "https://credentialengineregistry.org/resources/ce-0f0af1dd-35c7-43e2-9363-6bc079508747"
+    );
+    PathwayViewer.loadPathway(
+      document.querySelector("#somePathwayBox2"), 
+      "https://credentialengineregistry.org/resources/ce-164b0c4e-f96e-4597-a5d6-2fcd53635c46"
+    );
+  }
 </script>
 </head>
 <body>
-    <div id="somePathwayBox1"></div>
-    <div id="somePathwayBox2"></div>
-    <div id="somePathwayBox3"></div>
+  <div id="somePathwayBox1"></div>
+  <div id="somePathwayBox2"></div>
+  <div id="somePathwayBox3"></div>
 </body>
 ```
 
@@ -114,74 +114,74 @@ To change the configuration, pass an object with the values you want to override
 <head>
 <script type="text/javascript" src="../src/pathwayviewer.js" onload="setupPathway()" defer async></script>
 <script type="text/javascript">
-    function setupPathway(){
-        PathwayViewer.loadPathway(
-            document.querySelector("#somePathwayBox"), 
-            "https://credentialengineregistry.org/resources/ce-9dec2bcb-40a4-42e2-8fa3-afc04ddc04aa",
-            {
-                UI: {
-                    PathwayHeaderTag: "h1",
-                    DefaultComponentProgressionLevelHeaderLabel: { "en-us": "All Components" },
-                    ComponentURILinks: []
-                },
-                Language: {
-                    PreferredCodes: [ "en-gb" ]
-                }
-            }
-        );
-    }
+  function setupPathway(){
+    PathwayViewer.loadPathway(
+      document.querySelector("#somePathwayBox"), 
+      "https://credentialengineregistry.org/resources/ce-9dec2bcb-40a4-42e2-8fa3-afc04ddc04aa",
+      {
+        UI: {
+          PathwayHeaderTag: "h1",
+          DefaultComponentProgressionLevelHeaderLabel: { "en-us": "All Components" },
+          ComponentURILinks: []
+        },
+        Language: {
+          PreferredCodes: [ "en-gb" ]
+        }
+      }
+    );
+  }
 </script>
 </head>
 <body>
-    <div id="somePathwayBox"></div>
+  <div id="somePathwayBox"></div>
 </body>
 ```
 
 The configuration will need to be passed for each Pathway on the page where you want to override the default values. This allows having different configurations for each Pathway, if desired. For example:
 ```html
 <head>
-    <title>Pathway Viewer Demo</title>
-    <script type="text/javascript" src="../src/pathwayviewer.js" onload="setupPathway()" defer async></script>
-    <script type="text/javascript">
-        function setupPathway(){
-            PathwayViewer.loadPathway(
-                document.querySelector("#somePathwayBox1"), 
-                "https://credentialengineregistry.org/resources/ce-9dec2bcb-40a4-42e2-8fa3-afc04ddc04aa"
-            );
-            PathwayViewer.loadPathway(
-                document.querySelector("#somePathwayBox2"), 
-                "https://credentialengineregistry.org/resources/ce-0209da38-3aa8-4e9d-8b51-93e16fc9cb9a",
-                {
-                    UI: {
-                        PathwayHeaderTag: "h3",
-                        DefaultComponentProgressionLevelHeaderLabel: { "en-us": "Components Without Level" }
-                    },
-                    Language: {
-                        PreferredCodes: [ "en-gb", "en" ]
-                    }
-                }
-            );
-            PathwayViewer.loadPathway(
-                document.querySelector("#somePathwayBox3"), 
-                "https://credentialengineregistry.org/resources/ce-c0ff089f-7f18-4248-9054-45a6e5d2c8b4",
-                {
-                    UI: {
-                        PathwayHeaderTag: "h1",
-                        DefaultComponentProgressionLevelHeaderLabel: { "en-us": "All Components" },
-                        ComponentURILinks: []
-                    },
-                    Language: {
-                        PreferredCodes: [ "en-gb" ]
-                    }
-                }
-            );
+  <title>Pathway Viewer Demo</title>
+  <script type="text/javascript" src="../src/pathwayviewer.js" onload="setupPathway()" defer async></script>
+  <script type="text/javascript">
+    function setupPathway(){
+      PathwayViewer.loadPathway(
+        document.querySelector("#somePathwayBox1"), 
+        "https://credentialengineregistry.org/resources/ce-9dec2bcb-40a4-42e2-8fa3-afc04ddc04aa"
+      );
+      PathwayViewer.loadPathway(
+        document.querySelector("#somePathwayBox2"), 
+        "https://credentialengineregistry.org/resources/ce-0209da38-3aa8-4e9d-8b51-93e16fc9cb9a",
+        {
+          UI: {
+            PathwayHeaderTag: "h3",
+            DefaultComponentProgressionLevelHeaderLabel: { "en-us": "Components Without Level" }
+          },
+          Language: {
+            PreferredCodes: [ "en-gb", "en" ]
+          }
         }
-    </script>
+      );
+      PathwayViewer.loadPathway(
+        document.querySelector("#somePathwayBox3"), 
+        "https://credentialengineregistry.org/resources/ce-c0ff089f-7f18-4248-9054-45a6e5d2c8b4",
+        {
+          UI: {
+            PathwayHeaderTag: "h1",
+            DefaultComponentProgressionLevelHeaderLabel: { "en-us": "All Components" },
+            ComponentURILinks: []
+          },
+          Language: {
+            PreferredCodes: [ "en-gb" ]
+          }
+        }
+      );
+    }
+  </script>
 </head>
 <body>
-    <div id="somePathwayBox1"></div>
-    <div id="somePathwayBox2"></div>
-    <div id="somePathwayBox3"></div>
+  <div id="somePathwayBox1"></div>
+  <div id="somePathwayBox2"></div>
+  <div id="somePathwayBox3"></div>
 </body>
 ```
 
