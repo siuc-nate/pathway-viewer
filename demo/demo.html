@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <title>Pathway Viewer Demo</title>
+    <script type="text/javascript" src="../src/pathwayviewer.js" onload="setupPathway()" defer async></script>
+    <script type="text/javascript">
+        function setupPathway(){
+            PathwayViewer.loadPathway(
+                document.querySelector("#somePathwayBox1"), 
+                "https://credentialengineregistry.org/resources/ce-9dec2bcb-40a4-42e2-8fa3-afc04ddc04aa"
+            );
+            PathwayViewer.loadPathway(
+                document.querySelector("#somePathwayBox2"), 
+                "https://credentialengineregistry.org/resources/ce-0f0af1dd-35c7-43e2-9363-6bc079508747"
+            );
+            PathwayViewer.loadPathway(
+                document.querySelector("#somePathwayBox2"), 
+                "https://credentialengineregistry.org/resources/ce-164b0c4e-f96e-4597-a5d6-2fcd53635c46"
+            );
+            PathwayViewer.loadPathway(
+                document.querySelector("#somePathwayBox3"), 
+                "https://credentialengineregistry.org/resources/ce-5023f76d-e4b6-4c42-8ed6-f5074dcf62a2"
+            );
+            PathwayViewer.loadPathway(
+                document.querySelector("#somePathwayBox4"), 
+                "https://credentialengineregistry.org/resources/ce-0209da38-3aa8-4e9d-8b51-93e16fc9cb9a"
+            );
+            PathwayViewer.loadPathway(
+                document.querySelector("#somePathwayBox5A"), 
+                "https://credentialengineregistry.org/resources/ce-c0ff089f-7f18-4248-9054-45a6e5d2c8b4"
+            );
+            PathwayViewer.loadPathway(
+                document.querySelector("#somePathwayBox5B"), 
+                "https://credentialengineregistry.org/resources/ce-c0ff089f-7f18-4248-9054-45a6e5d2c8b4"
+            );
+        }
+    </script>
+</head>
+<body>
+    <div id="somePathwayBox1"></div>
+    <div id="somePathwayBox2"></div>
+    <div id="somePathwayBox3"></div>
+    <div id="somePathwayBox4"></div>
+    <div id="somePathwayBox5A"></div>
+    <div id="somePathwayBox5B"></div>
+</body>
